@@ -1,0 +1,17 @@
+Package: com.cike.ddd
+Name: ddd
+Version: 0.1-1
+Description: 
+Section: Tweaks
+Depends: firmware (>= 5.0), mobilesubstrate
+Conflicts: 
+Replaces: 
+Priority: optional
+Architecture: iphoneos-arm
+Author: niu_o0
+dev: 
+Homepage: 
+Depiction: 
+Maintainer: 
+Icon: 
+
