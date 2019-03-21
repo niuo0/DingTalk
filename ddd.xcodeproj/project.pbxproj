@@ -7,20 +7,37 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0721745A21C3A02B001441BA /* LWPClient_.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0721745921C3A02B001441BA /* LWPClient_.mm */; };
+		07491DAC21901D0B007BA16C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07491DAB21901D0B007BA16C /* UIKit.framework */; };
 		075F6073212C14F900E9FC05 /* LAPluginInstanceCollector_.mm in Sources */ = {isa = PBXBuildFile; fileRef = 075F6072212C14F900E9FC05 /* LAPluginInstanceCollector_.mm */; };
 		075F6079212D1F6300E9FC05 /* DTInfoPlist_.mm in Sources */ = {isa = PBXBuildFile; fileRef = 075F6078212D1F6300E9FC05 /* DTInfoPlist_.mm */; };
 		076765BE212BEAB200896706 /* LAWebViewJavascriptBridge_.mm in Sources */ = {isa = PBXBuildFile; fileRef = 076765BD212BEAB200896706 /* LAWebViewJavascriptBridge_.mm */; };
 		076765C0212C016B00896706 /* LAWebViewContainer_.mm in Sources */ = {isa = PBXBuildFile; fileRef = 076765BF212C016B00896706 /* LAWebViewContainer_.mm */; };
+		07A10F2221C2345F0069B3EF /* LAPluginLogicManager_.mm in Sources */ = {isa = PBXBuildFile; fileRef = 07A10F2121C2345F0069B3EF /* LAPluginLogicManager_.mm */; };
+		07A10F2421C239120069B3EF /* LAAction.h in Headers */ = {isa = PBXBuildFile; fileRef = 07A10F2321C239120069B3EF /* LAAction.h */; };
+		07A10F2621C266800069B3EF /* DTLAPUserTrack_.mm in Sources */ = {isa = PBXBuildFile; fileRef = 07A10F2521C266800069B3EF /* DTLAPUserTrack_.mm */; };
+		07A10F2821C268EC0069B3EF /* UT_.mm in Sources */ = {isa = PBXBuildFile; fileRef = 07A10F2721C268EC0069B3EF /* UT_.mm */; };
 		07A8A18D212AB67400D84C91 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07A8A18C212AB67400D84C91 /* Foundation.framework */; };
 		07A8A197212AB67400D84C91 /* ddd.mm in Sources */ = {isa = PBXBuildFile; fileRef = 07A8A196212AB67400D84C91 /* ddd.mm */; };
+		07B2414521D239C000692C42 /* LWPTransactionService_.mm in Sources */ = {isa = PBXBuildFile; fileRef = 07B2414421D239C000692C42 /* LWPTransactionService_.mm */; };
+		07B2414721D38E7300692C42 /* LWPConnection_.mm in Sources */ = {isa = PBXBuildFile; fileRef = 07B2414621D38E7300692C42 /* LWPConnection_.mm */; };
+		07B2414921D4BFC400692C42 /* SecurityGuardManager_.mm in Sources */ = {isa = PBXBuildFile; fileRef = 07B2414821D4BFC400692C42 /* SecurityGuardManager_.mm */; };
 		07B4222F212BB6000077E325 /* LAWebView_.mm in Sources */ = {isa = PBXBuildFile; fileRef = 07B4222E212BB6000077E325 /* LAWebView_.mm */; };
+		07B94CAA21D5C57E00B76590 /* AntAppInfo_.m in Sources */ = {isa = PBXBuildFile; fileRef = 07B94CA921D5C57E00B76590 /* AntAppInfo_.m */; };
+		07FB3E7721C39A6F00101D37 /* LWPRequest_.mm in Sources */ = {isa = PBXBuildFile; fileRef = 07FB3E7621C39A6F00101D37 /* LWPRequest_.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0721745921C3A02B001441BA /* LWPClient_.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LWPClient_.mm; sourceTree = "<group>"; };
+		07491DAB21901D0B007BA16C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		075F6072212C14F900E9FC05 /* LAPluginInstanceCollector_.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LAPluginInstanceCollector_.mm; sourceTree = "<group>"; };
 		075F6078212D1F6300E9FC05 /* DTInfoPlist_.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = DTInfoPlist_.mm; sourceTree = "<group>"; };
 		076765BD212BEAB200896706 /* LAWebViewJavascriptBridge_.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LAWebViewJavascriptBridge_.mm; sourceTree = "<group>"; };
 		076765BF212C016B00896706 /* LAWebViewContainer_.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LAWebViewContainer_.mm; sourceTree = "<group>"; };
+		07A10F2121C2345F0069B3EF /* LAPluginLogicManager_.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = LAPluginLogicManager_.mm; sourceTree = "<group>"; };
+		07A10F2321C239120069B3EF /* LAAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LAAction.h; sourceTree = "<group>"; };
+		07A10F2521C266800069B3EF /* DTLAPUserTrack_.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = DTLAPUserTrack_.mm; sourceTree = "<group>"; };
+		07A10F2721C268EC0069B3EF /* UT_.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = UT_.mm; sourceTree = "<group>"; };
 		07A8A189212AB67400D84C91 /* dd.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = dd.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		07A8A18C212AB67400D84C91 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		07A8A191212AB67400D84C91 /* control.txt */ = {isa = PBXFileReference; lastKnownFileType = text; name = control.txt; path = Package/DEBIAN/control.txt; sourceTree = "<group>"; };
@@ -29,7 +46,12 @@
 		07A8A195212AB67400D84C91 /* ddd-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ddd-Prefix.pch"; sourceTree = "<group>"; };
 		07A8A196212AB67400D84C91 /* ddd.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ddd.mm; sourceTree = "<group>"; };
 		07A8A19B212AB67400D84C91 /* ddd.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = ddd.plist; path = Package/Library/MobileSubstrate/DynamicLibraries/ddd.plist; sourceTree = "<group>"; };
+		07B2414421D239C000692C42 /* LWPTransactionService_.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LWPTransactionService_.mm; sourceTree = "<group>"; };
+		07B2414621D38E7300692C42 /* LWPConnection_.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LWPConnection_.mm; sourceTree = "<group>"; };
+		07B2414821D4BFC400692C42 /* SecurityGuardManager_.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = SecurityGuardManager_.mm; sourceTree = "<group>"; };
 		07B4222E212BB6000077E325 /* LAWebView_.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = LAWebView_.mm; sourceTree = "<group>"; };
+		07B94CA921D5C57E00B76590 /* AntAppInfo_.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AntAppInfo_.m; sourceTree = "<group>"; };
+		07FB3E7621C39A6F00101D37 /* LWPRequest_.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = LWPRequest_.mm; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07491DAC21901D0B007BA16C /* UIKit.framework in Frameworks */,
 				07A8A18D212AB67400D84C91 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -64,6 +87,7 @@
 		07A8A18B212AB67400D84C91 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				07491DAB21901D0B007BA16C /* UIKit.framework */,
 				07A8A18C212AB67400D84C91 /* Foundation.framework */,
 			);
 			name = Frameworks;
@@ -78,6 +102,16 @@
 				076765BF212C016B00896706 /* LAWebViewContainer_.mm */,
 				075F6072212C14F900E9FC05 /* LAPluginInstanceCollector_.mm */,
 				075F6078212D1F6300E9FC05 /* DTInfoPlist_.mm */,
+				07B94CA921D5C57E00B76590 /* AntAppInfo_.m */,
+				07A10F2321C239120069B3EF /* LAAction.h */,
+				07A10F2121C2345F0069B3EF /* LAPluginLogicManager_.mm */,
+				07A10F2521C266800069B3EF /* DTLAPUserTrack_.mm */,
+				07A10F2721C268EC0069B3EF /* UT_.mm */,
+				07FB3E7621C39A6F00101D37 /* LWPRequest_.mm */,
+				0721745921C3A02B001441BA /* LWPClient_.mm */,
+				07B2414421D239C000692C42 /* LWPTransactionService_.mm */,
+				07B2414621D38E7300692C42 /* LWPConnection_.mm */,
+				07B2414821D4BFC400692C42 /* SecurityGuardManager_.mm */,
 				07A8A18F212AB67400D84C91 /* Package */,
 				07A8A193212AB67400D84C91 /* Supporting Files */,
 			);
@@ -142,6 +176,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07A10F2421C239120069B3EF /* LAAction.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -176,6 +211,7 @@
 				TargetAttributes = {
 					07A8A188212AB67400D84C91 = {
 						CreatedOnToolsVersion = 7.2.1;
+						ProvisioningStyle = Manual;
 					};
 				};
 			};
@@ -208,7 +244,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "/opt/iOSOpenDev/bin/iosod --xcbp\n\n#exit 0\n\nPRODUCT=${BUILT_PRODUCTS_DIR}\"/\"${EXECUTABLE_PATH}\nvar=${PWD%/*}\n           cd ${var}\n           var=${var}\"/DingTalk.app\"\n           echo ${var}\n           cp -r ${PRODUCT} ${var}\n           ./codesing6";
+			shellScript = "/opt/iOSOpenDev/bin/iosod --xcbp\n\n#exit 0\n\nPRODUCT=${BUILT_PRODUCTS_DIR}\"/\"${EXECUTABLE_PATH}\n\nvar=${PWD%/*}\necho $var\nvar=\"/Users/niu_o0/Desktop/钉钉4.5\"\necho $var\n            cd ${var}\n           var=${var}\"/DingTalk1.app\"\n           echo ${var}\n           cp -r ${PRODUCT} ${var}\n           ./codesing6\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -217,12 +253,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07A10F2821C268EC0069B3EF /* UT_.mm in Sources */,
+				07B2414721D38E7300692C42 /* LWPConnection_.mm in Sources */,
+				07FB3E7721C39A6F00101D37 /* LWPRequest_.mm in Sources */,
+				07A10F2221C2345F0069B3EF /* LAPluginLogicManager_.mm in Sources */,
 				076765C0212C016B00896706 /* LAWebViewContainer_.mm in Sources */,
 				076765BE212BEAB200896706 /* LAWebViewJavascriptBridge_.mm in Sources */,
 				07B4222F212BB6000077E325 /* LAWebView_.mm in Sources */,
+				07A10F2621C266800069B3EF /* DTLAPUserTrack_.mm in Sources */,
+				0721745A21C3A02B001441BA /* LWPClient_.mm in Sources */,
+				07B2414521D239C000692C42 /* LWPTransactionService_.mm in Sources */,
 				07A8A197212AB67400D84C91 /* ddd.mm in Sources */,
 				075F6073212C14F900E9FC05 /* LAPluginInstanceCollector_.mm in Sources */,
 				075F6079212D1F6300E9FC05 /* DTInfoPlist_.mm in Sources */,
+				07B94CAA21D5C57E00B76590 /* AntAppInfo_.m in Sources */,
+				07B2414921D4BFC400692C42 /* SecurityGuardManager_.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -250,7 +295,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = "$(iOSOpenDevPath)/include/**";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LIBRARY_SEARCH_PATHS = "$(iOSOpenDevPath)/lib/**";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -273,7 +318,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = "$(iOSOpenDevPath)/include/**";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LIBRARY_SEARCH_PATHS = "$(iOSOpenDevPath)/lib/**";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -285,9 +330,13 @@
 		07A8A19F212AB67400D84C91 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
+				ARCHS = "$(ARCHS_STANDARD)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
+				ENABLE_STRICT_OBJC_MSGSEND = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -297,7 +346,8 @@
 				INSTALL_PATH = /Library/MobileSubstrate/DynamicLibraries;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				PRODUCT_NAME = dd;
-				PROVISIONING_PROFILE = "29879d2c-57d3-4522-9a0f-b3ad9b24b3c9";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				iOSOpenDevBuildPackageOnAnyBuild = NO;
 				iOSOpenDevCopyOnBuild = NO;
 				iOSOpenDevDevice = "";
@@ -311,9 +361,12 @@
 		07A8A1A0212AB67400D84C91 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
+				ENABLE_STRICT_OBJC_MSGSEND = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -323,7 +376,8 @@
 				INSTALL_PATH = /Library/MobileSubstrate/DynamicLibraries;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				PRODUCT_NAME = dd;
-				PROVISIONING_PROFILE = "29879d2c-57d3-4522-9a0f-b3ad9b24b3c9";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				iOSOpenDevBuildPackageOnAnyBuild = NO;
 				iOSOpenDevCopyOnBuild = NO;
 				iOSOpenDevDevice = "";

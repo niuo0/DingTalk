@@ -11,33 +11,26 @@
 
 @class DTInfoPlist;
 
-void hook_Bundle();
-
 CHDeclareClass(DTInfoPlist);
 
 CHDeclareClass(NSBundle);
 
 CHClassMethod0(id, DTInfoPlist, getAppBundleId){
     
-//    static dispatch_once_t onceToken;
-//    dispatch_once(&onceToken, ^{
-//        hook_Bundle();
-//    });
-    
-    
     return @"com.laiwang.DingTalk";
     
 }
 
-CHMethod0(id, NSBundle, bundleIdentifier){
+CHMethod2(id, NSBundle, pathForResource, id, arg1, ofType, id, arg2) {
     
-    return @"com.laiwang.DingTalk";
-}
-
-void hook_Bundle() {
+    NSLog(@"``%s``%@ , %@", __FUNCTION__, arg1, arg2);
     
-    CHLoadLateClass(NSBundle);
-    CHHook0(NSBundle, bundleIdentifier);
+    if ([arg2 isEqualToString:@"mobileprovision"]) {
+        return nil;
+    }
+    
+    return  CHSuper2(NSBundle, pathForResource, arg1, ofType, arg2);
+    
 }
 
 CHConstructor {
@@ -45,4 +38,7 @@ CHConstructor {
     CHLoadLateClass(DTInfoPlist);
     
     CHClassHook0(DTInfoPlist, getAppBundleId);
+    
+    CHLoadLateClass(NSBundle);
+    CHHook2(NSBundle, pathForResource, ofType);
 }

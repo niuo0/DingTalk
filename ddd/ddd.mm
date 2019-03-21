@@ -23,8 +23,6 @@
 
 @class DTDefaultWorkTableCell;
 
-extern void hook_Bundle();
-
 CHDeclareClass(DTDefaultWorkTableCell);
 
 CHMethod1(void, DTDefaultWorkTableCell, cellTapped, id, arg1){
@@ -40,8 +38,6 @@ CHDeclareClass(DTWorkViewController); // declare class
 
 
 CHMethod(0, void, DTWorkViewController, viewDidLoad){
-    
-    hook_Bundle();
     
     CHSuper(0, DTWorkViewController, viewDidLoad);
     
@@ -62,11 +58,32 @@ CHMethod4(void, DTWorkViewController, openMicroAppWithItem, id, arg1, appView, i
 }
 
 
+
+
+static __attribute__((always_inline)) void AntiDebug_003() {
+#ifdef __arm64__
+    __asm__("mov X0, #31\n"
+            "mov X1, #0\n"
+            "mov X2, #0\n"
+            "mov X3, #0\n"
+            "mov w16, #26\n"
+            "svc #0x80");
+#endif
+}
+
+extern int my_arm_test(int a, int b, int c);
+extern int my_thumb_test(int a, int b);
+
+
 CHConstructor // code block that runs immediately upon load
 {
     @autoreleasepool
     {
         NSLog(@"````````````````````````hook1");
+        
+        int a = 5;
+        
+        AntiDebug_003();
         
         // CHLoadClass(ClassToHook); // load class (that is "available now")
         CHLoadLateClass(DTWorkViewController);  // load class (that will be "available later")

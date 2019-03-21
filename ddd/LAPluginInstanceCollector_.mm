@@ -51,9 +51,66 @@ CHDeclareClass(LAPluginInstanceCollector);
  0x46FD2C0
  -[TOCropViewController setAspectRatioLockEnabled:]
  */
+
+
+/*
+  handleJavaScriptRequest {
+ 
+  NSString * plugin = [arg1 objectForKey:@"plugin"];
+ 
+  NSString * action = [arg1 objectForKey:@"action"];
+ 
+  NSString * args = [arg1 objectForKey:@"args"];
+ 
+  LAActionRequest * request = [self buildActionRequest:args];
+  LAActionResponse * response = [self buildActionResponse:request pluginName:plugin actionName:action callback:arg2];
+ 
+  NSString * action_to = [action stringByAppendingString:@":to:"];
+ 
+  LAAction * laAction = [[LAPluginLogicManager sharedManager] actionForMethod:action_to pluginName:plugin];
+ 
+  if (laAction) {
+    NSString * identifier = [laAction instanceIdentifier];
+    DTLAPUserTrack * track = [[NSClassFromString(laAction.className) alloc] init];
+    track.delegate = self;
+    if (track) {
+        id obj = [self.plugInstanceMap objectForKey:identifier];
+        if (!obj) {
+            [self.plugInstanceMap setObject:track forKey:identifier];
+        }
+        SEL sel = NSSelectorFromString(action_to);
+        NSString * api = [self jsAPIName:action pluginName:plugin];
+        if ([track respondsToSelector:sel]) {
+            if (![self.delegate respondsToSelector:@"pluginInstance:jsapiShouldCall:"]) {
+ 
+                if ([self.delegate respondsToSelector:@"pluginInstance:jsapiWillCall:"]) {
+                    [self.delegate pluginInstance:self jsapiWillCall:api];
+                }
+                if ([laAction.mode isEqualToString:@"0"]){
+                    dispatch_async(dispatch_get_global_queue(0, 0), ^{
+                        sub_2CFB4E8
+                    })
+                }else if ([laAction.mode isEqualToString:@"1"]){
+                    if ([NSThread isMainThread]){
+                        sub_2CFB7B8
+                    }else{
+                        dispatch_async(dispatch_get_main_queue(), ^{
+                            [track performSelector:sel withObject:request withObject:response]
+                            if ([self.delegate respondsToSelector:@"pluginInstance:jsapiDidCall:"]){
+                                [self.delegate pluginInstance:jsapiDidCall:]
+                            }
+                        })
+                    }
+                }
+            }
+        }
+    }
+  }
+ 
+ }
+ */
+
 CHMethod2(void, LAPluginInstanceCollector, handleJavaScriptRequest, id, arg1, callback, block, arg2){
-    
-    //NSLog(@"``````%@", arg1);
     
     if ([arg1[@"action"] isEqualToString:@"getInterface"]){
         
@@ -108,16 +165,16 @@ CHMethod2(void, LAPluginInstanceCollector, handleJavaScriptRequest, id, arg1, ca
                                      @"keep": @"1",
                                      @"result": @{
                                              @"aMapCode": @"0",
-                                             @"accuracy": @"2000",
-                                             @"latitude": @"39.90109239366319",
-                                             @"longitude": @"116.2468956163194",
+                                             @"accuracy": @"65",
+                                             @"latitude": @"39.90293158637153",
+                                             @"longitude": @"116.2455485026042",
                                              @"netType": @"wifi",
-                                             @"operatorType": @"unknown",
+                                             @"operatorType": @"CUCC",
                                              @"resultCode": @"0",
                                              @"resultMessage": @""
                                              }
                                      };
-            arg2(retDic);
+            arg2(dic);
         };
         
         CHSuper2(LAPluginInstanceCollector, handleJavaScriptRequest, arg1, callback, _callback);
@@ -125,6 +182,70 @@ CHMethod2(void, LAPluginInstanceCollector, handleJavaScriptRequest, id, arg1, ca
         return;
         
     }
+    else if ([arg1[@"action"] isEqualToString:@"getAppInfo"]){
+        
+        
+        id _callback = ^(id dic){
+            
+            NSDictionary *retDic = @{
+                                     @"errorCode" : @"0",
+                                     @"errorMessage": @"",
+                                     @"keep": @"1",
+                                     @"result": @{
+                                             @"Injectplugs" : @"0",
+                                             @"appleEncrypt": @"0",
+                                             @"debug": @"0",
+                                             @"hook": @"0",
+                                             @"memoryplug": @"",
+                                             @"personSign": @"0",
+                                             @"pie": @"1",
+                                             @"rebuild": @"0",
+                                             @"resign": @"0",
+                                             @"restict": @"0",
+                                             @"sign": @"Apple default"
+                                             }
+                                     };
+            
+            
+            arg2(retDic);
+            
+        };
+        
+        CHSuper2(LAPluginInstanceCollector, handleJavaScriptRequest, arg1, callback, _callback);
+        
+        return;
+        
+    }
+    /*else if ([arg1[@"action"] isEqualToString:@"getDeviceInfo"]){
+        
+        id _callback = ^(id dic){
+            
+            NSDictionary *retDic = @{
+                                     @"errorCode" : @"0",
+                                     @"errorMessage": @"",
+                                     @"keep": @"0",
+                                     @"result": @{
+                                             @"Jalibreaktm" : @"0",
+                                             @"emulator": @"0",
+                                             @"isJalibreak": @"0",
+                                             @"kernelversion": dic[@"result"][@"kernelversion"],
+                                             @"logintm": dic[@"result"][@"logintm"],
+                                             @"process": @"",
+                                             @"proxy": @"0",
+                                             @"vpn": dic[@"result"][@"vpn"]
+                                             }
+                                     };
+            
+            
+            arg2(retDic);
+            
+        };
+        
+        CHSuper2(LAPluginInstanceCollector, handleJavaScriptRequest, arg1, callback, _callback);
+        
+        return;
+        
+    }*/
     
     id _callback = ^(id dic){
         

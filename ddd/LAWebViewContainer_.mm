@@ -23,6 +23,16 @@ CHMethod0(void, LAWebViewContainer, initWebJsBridge){
     
 }
 
+CHMethod2(void, LAWebViewContainer, pluginInstance, id, arg1, jsapiDidCall, id, arg2){
+    
+//    NSLog(@"```%@", [self pluginCollectorDelegate]);
+//
+//    NSLog(@"````%@", objc_msgSend(self, @selector(statusRecorder)));
+    
+    CHSuper2(LAWebViewContainer, pluginInstance, arg1, jsapiDidCall, arg2);
+    
+}
+
 
 CHConstructor{
     
@@ -30,4 +40,6 @@ CHConstructor{
     
     CHHook3(LAWebViewContainer, initWithInitialURL, webViewType, delegate);
     CHHook0(LAWebViewContainer, initWebJsBridge);
+    
+    CHHook2(LAWebViewContainer, pluginInstance, jsapiDidCall);
 }
